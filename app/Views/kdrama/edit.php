@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Edit</title>
+    <title>Edit</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,11 +13,11 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background: linear-gradient(to right, #3498db, #1abc9c);
+            background: #111;
         }
 
         main {
-            background-color: #fff;
+            background: #222;
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             padding: 30px;
@@ -27,13 +27,13 @@
         }
 
         h1 {
-            color: #333;
+            color: #fff;
             margin-bottom: 20px;
         }
 
         a {
             text-decoration: none;
-            color: #3498db;
+            color: #6785ff;
             display: inline-block;
             margin-bottom: 10px;
         }
@@ -47,7 +47,7 @@
 
         label {
             font-size: 14px;
-            color: #555;
+            color: #fff;
             text-align: left;
             width: 100%;
             margin-bottom: 5px;
@@ -76,16 +76,19 @@
 </head>
 <body>
     <main>
-        <h1>Blog Edit</h1>
-        <a href="<?= base_url('blog') ?>">Index</a>
-        <a href="<?= base_url('blog/create') ?>">Create</a>
+        <h1>Edit</h1>
+        <a href="<?= base_url('kdrama') ?>">Index</a>
+        <a href="<?= base_url('kdrama/create') ?>">Create</a>
 
-        <form method="post" action="<?= base_url('blog/update/') . $qwerty["blog_id"]?>">
-            <label for="blog_title">Blog Title:</label>
-            <input type="text" id="blog_title" name="blog_title" value="<?= $qwerty["blog_title"] ?>">
+        <form method="post" action="<?= base_url('kdrama/update/') . $qwerty["id"]?>">
+            <label for="drama_title">Title:</label>
+            <input type="text" id="drama_title" name="drama_title" value="<?= $qwerty["drama_title"] ?>">
 
-            <label for="blog_description">Blog Description:</label>
-            <textarea name="blog_description" id="blog_description"><?= $qwerty["blog_description"] ?></textarea>
+            <label for="drama_genre">Genre/s:</label>
+            <input type="text" id="drama_genre" name="drama_genre" value="<?= $qwerty["drama_genre"] ?>">
+
+            <label for="drama_description">Description:</label>
+            <textarea name="drama_description" id="drama_description"><?= $qwerty["drama_description"] ?></textarea>
 
             <button type="submit">Update</button>
         </form>

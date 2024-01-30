@@ -27,15 +27,15 @@ class DramaController extends BaseController
     }
 
     public function edit($id)
-    {
-        $drama_model = new DramaModel();
-        $dramas = $drama_model->where('drama_id', $id)->first();
+{
+    $drama_model = new DramaModel();
+    $drama = $drama_model->where('id', $id)->first();
 
-        return view('kdrama/edit', [
-            "user_id" => $id,
-            "qwerty" => $dramas,
-        ]);
-    }
+    return view('kdrama/edit', [
+        "user_id" => $id,
+        "qwerty" => $drama,
+    ]);
+}
 
     public function store()
     {
@@ -69,7 +69,7 @@ class DramaController extends BaseController
 
         $drama_model = new DramaModel();
 
-        $dramas = $drama_model->where('drama_id', $id)
+        $dramas = $drama_model->where('id', $id)
             ->set($drama_data)
             ->update();
 

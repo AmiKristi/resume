@@ -12,7 +12,7 @@ class DramaModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['drama_title', 'drama_genre', 'drama description'];
+    protected $allowedFields    = ['drama_title', 'drama_genre', 'drama_description'];
 
 // Dates
 protected $useTimestamps = false;

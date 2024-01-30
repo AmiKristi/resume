@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Blog Entry</title>
+    <title>Create</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,11 +13,11 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: linear-gradient(to right, #3498db, #1abc9c);
+            background: #111;
         }
 
         main {
-            background-color: #fff;
+            background: #222;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -27,13 +27,13 @@
         }
 
         h1 {
-            color: #333;
+            color: #fff;
         }
 
         a {
             text-decoration: none;
             margin-right: 10px;
-            color: #3498db;
+            color: #6785ff;
         }
 
         form {
@@ -44,7 +44,7 @@
         label {
             display: block;
             margin-bottom: 5px;
-            color: #333;
+            color: #fff;
         }
 
         input,
@@ -66,15 +66,18 @@
 </head>
 <body>
     <main>
-        <h1>Create Blog Entry</h1>
-        <a href="<?= base_url('blog') ?>">Index</a>
+        <h1>Create</h1>
+        <a href="<?= base_url('kdrama') ?>">Index</a>
 
-        <form method="post" action="<?= base_url('blog/store') ?>">
-            <label for="blog_title">Blog Title:</label>
-            <input type="text" id="blog_title" name="blog_title" required>
+        <form method="post" action="<?= base_url('kdrama/store') ?>">
+            <label for="drama_title">Title:</label>
+            <input type="text" id="drama_title" name="drama_title" required>
 
-            <label for="blog_description">Blog Description:</label>
-            <textarea name="blog_description" id="blog_description" required></textarea>
+            <label for="drama_genre">Genre/s:</label>
+            <input type="text" id="drama_genre" name="drama_genre" required>
+
+            <label for="drama_description">Description:</label>
+            <textarea name="drama_description" id="drama_description" required></textarea>
 
             <button type="submit">Submit</button>
         </form>

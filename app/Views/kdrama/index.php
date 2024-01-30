@@ -13,27 +13,82 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: linear-gradient(to right, #3498db, #1abc9c); 
+            background: #111;
+            width: 100%;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0; 
+            width: 100%;
+            z-index: 999;
+            padding: 15px 0;
+            font-family: 'Ubuntu', sans-serif;
+            transition: all 0.3s ease;
+            background: #111;
+        }
+
+        .navbar .max-width {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo a {
+            color: #fff;
+            font-size: 35px;
+            font-weight: 600;
+        }
+
+        .navbar .logo a span {
+            color: #6785ff;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.sticky .logo a span {
+            color: #fff;
+        }
+
+        .navbar .menu li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .navbar .menu li a {
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 25px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .menu li a:hover {
+            color: #6785ff;
+        }
+
+        .navbar.sticky .menu li a:hover {
+            color: #fff;
         }
 
         main {
-            background-color: #fff;
+            background: #222;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 600px;
+            padding: 40px; 
+            max-width: 1000px; 
             width: 100%;
             text-align: center;
         }
 
         h1 {
-            color: #333;
+            color: #fff;
         }
 
         a {
             text-decoration: none;
             margin-right: 10px;
-            color: #3498db;
+            color: #6785ff;
         }
 
         table {
@@ -46,10 +101,11 @@
             border: 1px solid #ddd;
             padding: 10px;
             text-align: left;
+            color:#fff;
         }
 
         th {
-            background-color: #3498db;
+            background: #6785ff;
             color: #fff;
         }
 
@@ -59,6 +115,8 @@
             border: none;
             padding: 5px 10px;
             cursor: pointer;
+            margin-bottom: 5px;
+            width: 65px;
         }
 
         .delete-button {
@@ -66,7 +124,25 @@
         }
     </style>
 </head>
+
 <body>
+    <nav class="navbar">
+        <div class="max-width">
+            <ul class="menu">
+                <li><a href="<?= base_url("home") ?> " alt="" class="menu-btn">Home</a></li>
+                <li><a href="<?= base_url("about") ?> " alt="" class="menu-btn">About</a></li>
+                <li><a href="<?= base_url("education") ?> " alt="" class="menu-btn">Education</a></li>
+                <li><a href="<?= base_url("skills") ?> " alt="" class="menu-btn">Skills</a></li>
+                <li><a href="<?= base_url("interests") ?> " alt="" class="menu-btn">Personal Interests</a></li>
+                <li><a href="<?= base_url("kdrama") ?> " alt="" class="menu-btn">Favorites</a></li>
+                <li><a href="<?= base_url("contact") ?> " alt="" class="menu-btn">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
     <main>
         <h1>Favorite Korean Dramas</h1>
         <a href="<?= base_url('kdrama/create') ?>">Create</a>
@@ -74,20 +150,20 @@
         <table>
             <tr>
                 <th>Title</th>
-                <th>Genre</th>
+                <th>Genre/s</th>
                 <th>Description</th>
                 <th>Action</th>
             </tr>
             <?php foreach ($dramas as $drama): ?>
                 <tr>
                     <td><?= $drama['drama_title'] ?></td>
-                    <td><?= $drama['drama_description'] ?></td>
+                    <td><?= $drama['drama_genre'] ?></td>
                     <td><?= $drama['drama_description'] ?></td>
                     <td>
-                        <a href="<?= base_url('kdrama/edit/') . $drama['drama_id'] ?>">
+                        <a href="<?= base_url('kdrama/edit/') . $drama['id'] ?>">
                             <button>Edit</button>
                         </a>
-                        <form style="display:inline" action="<?= base_url('kdrama/delete/') . $drama['drama_id'] ?>" method="post">
+                        <form style="display:inline" action="<?= base_url('kdrama/delete/') . $drama['id'] ?>" method="post">
                             <input type="hidden" name="_method" value="DELETE">
                             <button type="submit" class="delete-button" onclick="return confirm('Are you sure you want to delete this entry?')">Delete</button>
                         </form>

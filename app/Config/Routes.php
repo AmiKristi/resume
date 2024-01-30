@@ -27,4 +27,11 @@ $routes->get('blog/edit/(:num)', 'BlogController::edit/$1');
 $routes->post('blog/update/(:num)', 'BlogController::update/$1');
 $routes->delete('blog/delete/(:num)', 'BlogController::delete/$1');
 
+
 $routes->get('kdrama', 'DramaController::index');
+$routes->get('kdrama/create', 'DramaController::create');
+$routes->post('kdrama/store', 'DramaController::store');
+
+$routes->get('kdrama/edit/(:num)', 'DramaController::edit/$1');
+$routes->post('kdrama/update/(:num)', 'DramaController::update/$1');
+$routes->delete('kdrama/delete/(:num)', 'DramaController::delete/$1');

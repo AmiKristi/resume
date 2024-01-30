@@ -4,37 +4,39 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
-use App\Models\BlogModel;
+use App\Models\DramaModel;
 
-class BlogController extends BaseController
+class DramaController extends BaseController
 {
     public function index()
     {
-        return view('blog/index');
+        return view('kdrama/index');
     }
 
     public function create()
     {
-        return view('blog/create');
+        return view('kdrama/create');
     }
 
     public function edit($id)
     {
-        return view('blog/edit');
+        return view('kdrama/edit');
     }
 
     public function store()
     {
-        $blog_title = esc($this->request->getPost('blog_title'));
-        $blog_description = esc($this->request->getPost('blog_description'));
+        $drama_title = esc($this->request->getPost('drama_title'));
+        $drama_genre = esc($this->request->getPost('drama_genre'));
+        $drama_description = esc($this->request->getPost('drama_description'));
 
-        $blog_data = [
-            'blog_title' => $blog_title,
-            'blog_description' => $blog_description,
+        $drama_data = [
+            'drama_title' => $drama_title,
+            'drama_genre' => $drama_genre,
+            'drama_description' => $drama_description,
         ];
         
-        $blog_model = new BlogModel();
-        $blog_model->insert($blog_data);
+        $drama_model = new DramaModel();
+        $drama_model->insert($drama_data);
 
         return redirect()->back();
 

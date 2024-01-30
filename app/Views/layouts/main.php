@@ -26,6 +26,7 @@
                 <li><a href="<?= base_url("education") ?> " alt="" class="menu-btn">Education</a></li>
                 <li><a href="<?= base_url("skills") ?> " alt="" class="menu-btn">Skills</a></li>
                 <li><a href="<?= base_url("interests") ?> " alt="" class="menu-btn">Personal Interests</a></li>
+                <li><a href="<?= base_url("kdrama") ?> " alt="" class="menu-btn">Favorites</a></li>
                 <li><a href="<?= base_url("contact") ?> " alt="" class="menu-btn">Contact</a></li>
             </ul>
             </ul>
