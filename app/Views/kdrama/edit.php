@@ -64,7 +64,7 @@
         }
 
         button {
-            background-color: #27ae60;
+            background: #6785ff;;
             color: #fff;
             border: none;
             padding: 12px 20px;
@@ -77,8 +77,8 @@
 <body>
     <main>
         <h1>Edit</h1>
-        <a href="<?= base_url('kdrama') ?>">Index</a>
-        <a href="<?= base_url('kdrama/create') ?>">Create</a>
+        <a href="<?= base_url('kdrama') ?>"><button>Index</button></a>
+        <a href="<?= base_url('kdrama/create') ?>"><button>Create</button></a>
 
         <form method="post" action="<?= base_url('kdrama/update/') . $qwerty["id"]?>">
             <label for="drama_title">Title:</label>

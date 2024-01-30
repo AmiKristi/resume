@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,7 @@
 
         .navbar {
             position: fixed;
-            top: 0; 
+            top: 0;
             width: 100%;
             z-index: 999;
             padding: 15px 0;
@@ -75,12 +76,28 @@
             background: #222;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 40px; 
-            max-width: 1000px; 
+            padding: 40px;
+            max-width: 1000px;
+            height: 350px;
             width: 100%;
             text-align: center;
+            overflow-y: auto; 
+            max-height: calc(100vh - 70px); 
         }
 
+        main::-webkit-scrollbar {
+            width: 0.5em;
+        }
+
+        main::-webkit-scrollbar-thumb {
+            background-color: #6785ff;
+            outline: 1px solid #6785ff;
+        }
+
+        main::-webkit-scrollbar-track {
+            background-color: #222;
+        }
+        
         h1 {
             color: #fff;
         }
@@ -110,7 +127,7 @@
         }
 
         button {
-            background-color: #27ae60;
+            background: #6785ff;
             color: #fff;
             border: none;
             padding: 5px 10px;
@@ -145,7 +162,7 @@
 
     <main>
         <h1>Favorite Korean Dramas</h1>
-        <a href="<?= base_url('kdrama/create') ?>">Create</a>
+        <a href="<?= base_url('kdrama/create') ?>"><button>Create</button></a>
 
         <table>
             <tr>

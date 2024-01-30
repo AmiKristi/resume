@@ -56,7 +56,7 @@
         }
 
         button {
-            background-color: #27ae60;
+            background: #6785ff;;
             color: #fff;
             border: none;
             padding: 8px 15px;
@@ -67,7 +67,7 @@
 <body>
     <main>
         <h1>Create</h1>
-        <a href="<?= base_url('kdrama') ?>">Index</a>
+        <a href="<?= base_url('kdrama') ?>"><button>Index</button></a>
 
         <form method="post" action="<?= base_url('kdrama/store') ?>">
             <label for="drama_title">Title:</label>
