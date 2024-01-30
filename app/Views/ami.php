@@ -1,0 +1,1 @@
+Hi I am Ami Kristi Secondes from West Visayas State University!
