@@ -26,3 +26,5 @@ $routes->post('blog/store', 'BlogController::store');
 $routes->get('blog/edit/(:num)', 'BlogController::edit/$1');
 $routes->post('blog/update/(:num)', 'BlogController::update/$1');
 $routes->delete('blog/delete/(:num)', 'BlogController::delete/$1');
+
+$routes->get('kdrama', 'DramaController::index');
