@@ -160,8 +160,8 @@
             background-color: #e74c3c;
         }
     </style>
-</head>
 
+</head>
 <body>
     <nav class="navbar">
         <div class="max-width">

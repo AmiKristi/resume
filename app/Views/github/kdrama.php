@@ -3,13 +3,16 @@
 <?= $this->section('content') ?>
 
 <section class="favorites">
+<div class="content">
         <h1>Favorite Korean Dramas</h1>
-        <a href="<?= base_url('kdrama/create') ?>">Create</a>
+        <a href="<?= base_url('kdrama/create') ?>" class="button">Create</a>
+    </div>
 
+    <main>
         <table>
             <tr>
                 <th>Title</th>
-                <th>Genre</th>
+                <th>Genre/s</th>
                 <th>Description</th>
                 <th>Action</th>
             </tr>
@@ -30,6 +33,7 @@
                 </tr>
             <?php endforeach; ?>
         </table>
+    </main>
     </section>
 
     <?= $this->endSection() ?>

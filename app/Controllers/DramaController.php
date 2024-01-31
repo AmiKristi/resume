@@ -77,16 +77,16 @@ class DramaController extends BaseController
     }
 
     public function delete($id)
-{
-    $drama_model = new DramaModel();
-    $dramas = $drama_model->find($id);
+    {
+        $drama_model = new DramaModel();
+        $dramas = $drama_model->find($id);
 
-    if (!$dramas) {
+        if (!$dramas) {
         return redirect()->to('/kdrama');
     }
 
-    $drama_model->delete($id, 'drama_id');
+        $drama_model->delete($id, 'drama_id');
 
-    return redirect()->to('/kdrama');
-}
+        return redirect()->to('/kdrama');
+    }
 }
