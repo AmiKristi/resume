@@ -74,15 +74,17 @@
 
         main {
             background: #222;
-            border-radius: 8px;
+            border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 40px;
             max-width: 1000px;
             height: 350px;
-            width: 100%;
+            width: 800px;
             text-align: center;
             overflow-y: auto; 
             max-height: calc(100vh - 70px); 
+            margin-right: 25px;
+            margin-top: 20px;
         }
 
         main::-webkit-scrollbar {
@@ -91,6 +93,7 @@
 
         main::-webkit-scrollbar-thumb {
             background-color: #6785ff;
+            border-radius: 10px;
             outline: 1px solid #6785ff;
         }
 
@@ -98,8 +101,25 @@
             background-color: #222;
         }
         
+        .content {
+            padding: 40px;
+            overflow-y: auto;
+            max-height: calc(100vh - 70px);
+        }
+
+        .content a {
+            background: #6785ff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-bottom: 5px;
+            width: 65px;
+        }
+
         h1 {
             color: #fff;
+            font-size: 30px;
         }
 
         a {
@@ -160,10 +180,12 @@
         </div>
     </nav>
 
-    <main>
+    <div class="content">
         <h1>Favorite Korean Dramas</h1>
-        <a href="<?= base_url('kdrama/create') ?>"><button>Create</button></a>
+        <a href="<?= base_url('kdrama/create') ?>" class="button">Create</a>
+    </div>
 
+    <main>
         <table>
             <tr>
                 <th>Title</th>
