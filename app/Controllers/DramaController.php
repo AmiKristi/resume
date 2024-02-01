@@ -39,9 +39,9 @@ class DramaController extends BaseController
 
     public function store()
     {
-        $drama_title = esc($this->request->getPost('drama_title'));
-        $drama_genre = esc($this->request->getPost('drama_genre'));
-        $drama_description = esc($this->request->getPost('drama_description'));
+        $drama_title = esc($this->request->getPost('drama-title'));
+        $drama_genre = esc($this->request->getPost('drama-genre'));
+        $drama_description = esc($this->request->getPost('drama-description'));
 
         $drama_data = [
             'drama_title' => $drama_title,
@@ -57,9 +57,9 @@ class DramaController extends BaseController
 
     public function update($id)
     {
-        $drama_title = esc($this->request->getPost('drama_title'));
-        $drama_genre = esc($this->request->getPost('drama_genre'));
-        $drama_description = esc($this->request->getPost('drama_description'));
+        $drama_title = esc($this->request->getPost('drama-title'));
+        $drama_genre = esc($this->request->getPost('drama-genre'));
+        $drama_description = esc($this->request->getPost('drama-description'));
 
         $drama_data = [
             'drama_title' => $drama_title,

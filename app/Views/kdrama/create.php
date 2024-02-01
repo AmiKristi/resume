@@ -70,14 +70,14 @@
         <a href="<?= base_url('kdrama') ?>"><button>Index</button></a>
 
         <form method="post" action="<?= base_url('kdrama/store') ?>">
-            <label for="drama_title">Title:</label>
-            <input type="text" id="drama_title" name="drama_title" required>
+            <label for="drama-title">Title:</label>
+            <input type="text" id="drama-title" name="drama-title" required>
 
-            <label for="drama_genre">Genre/s:</label>
-            <input type="text" id="drama_genre" name="drama_genre" required>
+            <label for="drama-genre">Genre/s:</label>
+            <input type="text" id="drama-genre" name="drama-genre" required>
 
-            <label for="drama_description">Description:</label>
-            <textarea name="drama_description" id="drama_description" required></textarea>
+            <label for="drama-description">Description:</label>
+            <textarea name="drama-description" id="drama-description" required></textarea>
 
             <button type="submit">Submit</button>
         </form>
