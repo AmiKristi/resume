@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create</title>
+    <title>Favorite Korean Dramas</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,7 +21,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            max-width: 400px;
+            max-width: 500px;
             width: 100%;
             text-align: center;
         }
@@ -66,7 +66,7 @@
 </head>
 <body>
     <main>
-        <h1>Create</h1>
+        <h1>Favorite Korean Dramas</h1>
         <a href="<?= base_url('kdrama') ?>"><button>Index</button></a>
 
         <form method="post" action="<?= base_url('kdrama/store') ?>">

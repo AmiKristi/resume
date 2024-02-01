@@ -76,7 +76,7 @@
 </head>
 <body>
     <main>
-        <h1>Edit</h1>
+        <h1>Favorite Korean Dramas</h1>
         <a href="<?= base_url('kdrama') ?>"><button>Index</button></a>
         <a href="<?= base_url('kdrama/create') ?>"><button>Create</button></a>
 

@@ -12,7 +12,7 @@
                 </div>
                 <div class="column right">
                     <div class="text">I'm Ami Kristi and I'm an <span class="typing-2"></span></div>
-                    <p>Hello, I'm Ami Kristi Secondes, but most people call me Mika. I entered this world on December 14, 2001, in the lively town of San Joaquin, Iloilo. My roots are firmly planted in Purok 1, shaping my perspective on life. Now, at 22, I find comfort in the INFP-T personality, where introspection and creativity meet. Currently, I am enrolled in the Bachelor of Science in Information Technology program at West Visayas State University, where I navigate through the complexities of IT studies, immersing myself in coding and technological exploration.</p>
+                    <p>Hello, my name is Ami Kristi Secondes, but most people call me Mika. I came into this world on December 14, 2001, in the lively town of San Joaquin, Iloilo. My roots are deeply established in Purok 1, which shapes my outlook on life. Now, at 22, I find comfort in the INFP-T personality, which combines introspection and creativity. Currently, I am enrolled at West Visayas State University's Bachelor of Science in Information Technology program, where I am navigating the difficulties of IT academics while immersed in coding and technical discovery.</p>
                     <a href="<?= base_url("education") ?> " alt="">Know More</a>
                 </div>
             </div>
